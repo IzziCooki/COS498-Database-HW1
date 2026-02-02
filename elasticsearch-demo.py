@@ -7,7 +7,7 @@ import csv,re
 
 # first create a variable to represent the elasticsearch client you wish to connect to
 # first arg is the elasticsearch endpoint, second arg is the api key, both can be found in the Kibana dashboard for your cluster
-client = Elasticsearch("https://b99be8fe54f8461cba15e2b7ed9aec33.us-central1.gcp.cloud.es.io:443",api_key="SVh1dEQ1d0JXTl8zSzRJdTZuYXE6bldCSWRONzl6N09iTjBUbmNIMjJpQQ==")
+client = Elasticsearch("<your endpoint>",api_key="<your API key>")
 
 # elasticsearch throws an error if an existing document is added to an index, so this is just here so this program can be ran multiple times while still allowing the added data to remain visible after program execution is complete
 client.indices.delete(index="index-movies")
@@ -199,4 +199,5 @@ print(client.get(index="index-movies",id="/m/03/vyhn")['_source']['Genres'])
 client.delete(index="index-movies",id="/m/03/vyhn")
 
 # to delete an entire index, use .indices.delete(), as is done at the top of this program so it can be ran multiple times without elasticsearch throwing an error because the documents being added already exist
+
 client.indices.delete(index="index-movies") # to test this code this should probably be commented out bc otherwise you won't be able to see any of the data that was added
