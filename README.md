@@ -7,7 +7,7 @@
 - Run the command `pip install elasticsearch`
 
 
-## 1: Create a project 
+## 2: Create a project 
 
 -   Go to <a href="https://cloud.elastic.co/registration" target="_blank" rel="noopener">Elastic</a>
 to register for a new account if you don't have one already. Alternatively, <a href="https://cloud.elastic.co/login" target="_blank" rel="noopener">Login.</a>
@@ -18,12 +18,12 @@ to register for a new account if you don't have one already. Alternatively, <a h
 - Choose your project name and cloud provider. We used Google Cloud in this documentation. 
 - Create the project and wait for the server to start up.
 
-## 2: Create api key
+## 3: Create api key
 - Once the database and dashboard are set up, you can create an API key by clicking `API keys` and naming it what you want. 
 - The server endpoint should also be next to the API key button. Hold onto both for use in the next section.
 
 
-## 2: Connect to database and create index
+## 4: Connect to database and create index
 #### An index is a collection of documents uniquely identified by a name or an alias.
 
 #### To connect to the database and create the index:
@@ -88,7 +88,7 @@ print(bulk_response)
 
 - Success! You have created and stored string data in ElasticSearch! The next step is to search and query the data.
 
-## 3: Searching for data
+## 5: Searching for data
 - There is no point in storing data in the database if you don't access or read the data. The following code is an example to search the index for the word `Yosemite`.
 
 ```
@@ -110,3 +110,4 @@ print(text_search)
 
 
 [Source Documentation](https://www.elastic.co/docs/solutions/search/get-started/keyword-search-python)
+[Getting Started](https://www.elastic.co/docs/reference/elasticsearch/clients/python/getting-started)
